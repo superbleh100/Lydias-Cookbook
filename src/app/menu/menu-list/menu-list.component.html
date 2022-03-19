@@ -1,0 +1,11 @@
+<h1>Menu</h1>
+<mat-divider></mat-divider>
+<mat-list *ngFor="let day of menuList">
+    <mat-list-item>
+        <h4>{{day.date | date:'fullDate'}}</h4>
+    </mat-list-item>   
+    <mat-card *ngFor="let recipe of day.items"
+              class="card">
+        {{recipe.recipe}}
+    </mat-card>       
+</mat-list>
