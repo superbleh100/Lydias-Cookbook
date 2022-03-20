@@ -18,7 +18,35 @@ export class MenuListComponent implements OnInit{
   }
 
   getMenuItems() {
-    this.menuService.getMenu().subscribe(items => this.menuList = items);
+    this.menuService.getMenu().subscribe(items => {
+      let days = this.getWeek();
+      days.forEach(day => {
+        let item = items.find(d => d.date.getTime() == day.getTime());
+        if (item) {
+          this.menuList.push(item);
+        } else {
+          this.menuList.push({
+            date: new Date(day),
+            items: []
+          });
+        }
+      });
+    });
+  }
+
+  private getWeek(): Date[] {
+    let days = [];
+    let today = new Date();
+    let currentDay = new Date();
+    today.setHours(0,0,0,0);
+    currentDay.setHours(0,0,0,0);
+
+    for (let i = 0; i < 7; i++) {
+      days.push(currentDay);
+      currentDay = new Date(today.setDate(today.getDate() + 1));
+    }
+
+    return days;
   }
 
 }

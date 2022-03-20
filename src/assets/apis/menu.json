@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "date": "3/19",
+    "items": [
+        {"recipe": "first", "id": 1},
+        {"recipe": "second", "id": 2}
+    ]
+  },
+  {
+    "id": 2,
+    "date": "3/21",
+    "items": [
+        {"recipe": "third", "id": 3}
+    ]
+  },
+  {
+    "id": 3,
+    "date": "4/2",
+    "items": [
+        {"recipe": "fourth", "id": 4},
+        {"recipe": "fifth", "id": 5}
+    ]
+  }
+
+]

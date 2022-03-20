@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuRoutingModule } from './menu-routing.module';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -15,9 +17,11 @@ import { MatCardModule } from '@angular/material/card';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
+    MatButtonModule,
     MatCardModule,
     MatDividerModule,
-    MatGridListModule,
+    MatIconModule,
     MatListModule,
     MenuRoutingModule,
   ]

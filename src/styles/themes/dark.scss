@@ -1,0 +1,31 @@
+// src/styles/themes/_dark.scss
+
+@use "sass:map";
+@use "@angular/material" as mat;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$fun-dark-primary: mat.define-palette(mat.$blue-grey-palette);
+$fun-dark-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$fun-dark-warn: mat.define-palette(mat.$deep-orange-palette);
+
+$fun-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $fun-dark-primary,
+      accent: $fun-dark-accent,
+      warn: $fun-dark-warn,
+    ),
+  )
+);
+
+.dark-theme {
+  @include mat.core-color($fun-dark-theme);
+  @include mat.button-color($fun-dark-theme);
+  @include mat.card-theme($fun-dark-theme);
+  @include mat.divider-theme($fun-dark-theme);
+  @include mat.icon-theme($fun-dark-theme);
+  @include mat.list-theme($fun-dark-theme);
+  @include mat.slide-toggle-theme($fun-dark-theme);
+  @include mat.toolbar-theme($fun-dark-theme);
+  @include mat.tabs-theme($fun-dark-theme);
+}

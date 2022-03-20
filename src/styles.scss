@@ -7,8 +7,16 @@
 @include mat.core();
 
 @include mat.core-theme(light.$fun-light-theme);
+@include mat.button-theme(light.$fun-light-theme);
+@include mat.card-theme(light.$fun-light-theme);
+@include mat.divider-theme(light.$fun-light-theme);
+@include mat.icon-theme(light.$fun-light-theme);
+@include mat.list-theme(light.$fun-light-theme);
+@include mat.slide-toggle-theme(light.$fun-light-theme);
+@include mat.toolbar-theme(light.$fun-light-theme);
+@include mat.tabs-theme(light.$fun-light-theme);
 @include mat.all-component-themes(light.$fun-light-theme);
-//@include mat.button-theme(light.$fun-light-theme);
+
 
 html,
 body {
