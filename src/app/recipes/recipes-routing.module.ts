@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { MenuListComponent } from './menu-list/menu-list.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
 
 const menuRoutes: Routes = [
-  { path: '',  component: MenuListComponent, data: { animation: 'menues' } },
+  { path: '',  component: RecipeListComponent, data: { animation: 'recipes' } },
 ];
 
 @NgModule({
@@ -15,7 +14,7 @@ const menuRoutes: Routes = [
     RouterModule
   ]
 })
-export class MenuRoutingModule { }
+export class RecipeRoutingModule { }
 
 
 /*

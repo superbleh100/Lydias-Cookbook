@@ -1,10 +1,14 @@
-
   <mat-toolbar  color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
     <span>Lydia's Cookbook</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="toggleDarkTheme()"  aria-label="Toggle light/dark mode">
+      <mat-icon>{{isDark ? 'brightness_3' : 'wb_sunny'}}</mat-icon>
+    </button>
   </mat-toolbar>
+  <nav mat-tab-nav-bar mat-stretch-tabs color="primary">
+    <a mat-tab-link routerLink="/menu" routerLinkActive="active-link">Menu</a>
+    <a mat-tab-link routerLink="/recipes" routerLinkActive="active-link">Recipes</a>
+  </nav>
   <div class="container">
     <router-outlet></router-outlet>
   </div>

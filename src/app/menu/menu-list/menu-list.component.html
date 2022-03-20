@@ -3,9 +3,13 @@
 <mat-list *ngFor="let day of menuList">
     <mat-list-item>
         <h4>{{day.date | date:'fullDate'}}</h4>
-    </mat-list-item>   
+        <span class="spacer"></span>
+        <button mat-icon-button color="accent" class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>add_circle</mat-icon>
+        </button>
+    </mat-list-item>
     <mat-card *ngFor="let recipe of day.items"
               class="card">
         {{recipe.recipe}}
-    </mat-card>       
+    </mat-card>
 </mat-list>
