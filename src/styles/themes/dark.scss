@@ -23,6 +23,7 @@ $fun-dark-theme: mat.define-dark-theme(
   @include mat.button-color($fun-dark-theme);
   @include mat.card-theme($fun-dark-theme);
   @include mat.divider-theme($fun-dark-theme);
+  @include mat.expansion-theme($fun-dark-theme);
   @include mat.icon-theme($fun-dark-theme);
   @include mat.list-theme($fun-dark-theme);
   @include mat.slide-toggle-theme($fun-dark-theme);

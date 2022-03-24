@@ -10,6 +10,7 @@
 @include mat.button-theme(light.$fun-light-theme);
 @include mat.card-theme(light.$fun-light-theme);
 @include mat.divider-theme(light.$fun-light-theme);
+@include mat.expansion-theme(light.$fun-light-theme);
 @include mat.icon-theme(light.$fun-light-theme);
 @include mat.list-theme(light.$fun-light-theme);
 @include mat.slide-toggle-theme(light.$fun-light-theme);

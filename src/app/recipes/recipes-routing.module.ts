@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 
-const menuRoutes: Routes = [
+const recipeRoutes: Routes = [
   { path: '',  component: RecipeListComponent, data: { animation: 'recipes' } },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(menuRoutes)
+    RouterModule.forChild(recipeRoutes)
   ],
   exports: [
     RouterModule
